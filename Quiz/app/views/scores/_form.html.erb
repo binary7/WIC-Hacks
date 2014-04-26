@@ -1,0 +1,44 @@
+<%= form_for @score do |f| %>
+  <%= f.label :q1, @question1.body %>
+  <%= f.text_field :q1 %>
+  <br>
+  <%= f.label :q2, @question2.body %>
+  <%= f.text_field :q2 %>
+  <br>
+  <%= f.label :q3, @question3.body %>
+  <%= f.text_field :q3 %>
+  <br>
+  <%= f.label :q4, @question4.body %>
+  <%= f.text_field :q4 %>
+  <br>
+  <%= f.label :q5, @question5.body %>
+  <%= f.text_field :q5 %>
+  <br>
+  <%= f.label :q6, @question6.body %>
+  <%= f.text_field :q6 %>
+  <br>
+  <%= f.label :q7, @question7.body %>
+  <%= f.text_field :q7 %>
+  <br>
+  <%= f.label :q8, @question8.body %>
+  <%= f.text_field :q8 %>
+  <br>
+  <%= f.label :q9, @question10.body %>
+  <%= f.text_field :q9 %>
+  <br>
+  <%= f.label :q10, @question10.body %>
+  <%= f.text_field :q10 %>
+  <br>
+  <%= f.label :q11, @question11.body %>
+  <%= f.text_field :q11 %>
+  <br>
+  <%= f.label :q12, @question12.body %>
+  <%= f.text_field :q12 %>
+  <br>
+  <%= f.label :q13, @question13.body %>
+  <%= f.text_field :q13 %>
+  <%= f.hidden_field :user_id, value: @user.id %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
