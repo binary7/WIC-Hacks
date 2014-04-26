@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140426223325) do
+=======
+ActiveRecord::Schema.define(version: 20140426205023) do
+>>>>>>> 6a03bd87c86c2ba27381a654c8f770861633b87f
 
   create_table "answers", force: true do |t|
     t.integer  "question_id"
@@ -23,6 +27,25 @@ ActiveRecord::Schema.define(version: 20140426223325) do
 
   create_table "questions", force: true do |t|
     t.string   "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "scores", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "q1"
+    t.integer  "q2"
+    t.integer  "q3"
+    t.integer  "q4"
+    t.integer  "q5"
+    t.integer  "q6"
+    t.integer  "q7"
+    t.integer  "q8"
+    t.integer  "q9"
+    t.integer  "q10"
+    t.integer  "q11"
+    t.integer  "q12"
+    t.integer  "q13"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

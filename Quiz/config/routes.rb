@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-post 'users/:id/questions/:id' => 'users#update_score'
-resources :users do
-  resources :answers
-  resources :questions
-end
+# post 'users/:id/questions/:id' => 'users#update_score'
+resources :users
+resources :answers
+resources :questions
+resources :scores
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

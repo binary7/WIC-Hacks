@@ -26,7 +26,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.save!
-    redirect_to user_questions_path(:user_id => @user)
+    redirect_to new_score_path(:user_id => @user.id)
   end
 
   # PATCH/PUT /users/1
