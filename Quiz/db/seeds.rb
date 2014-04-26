@@ -13,7 +13,13 @@ questions = Question.create([
   { body: 'I enjoy programming computers to solve problems.'},
   { body: 'I want to manipulate large quantities of data.'},
   { body: 'I am interested in solving physical-world problems (ie. I would enjoy helping to design a building to survive earthquakes).'},
+<<<<<<< HEAD
+  { body: 'I am okay if the problem I am working on has no direct real-world application.'},  
+  { body: 'I like looking for patterns and relationships.'},
+  { body: 'Statistics and probability interest me.'}  
+=======
   { body: 'I am okay if the problem I am working on has no direct real-world application.'},
   { body: 'I like looking for patterns and relationships.'},
   { body: 'Statistics and probability interest me.'}
+>>>>>>> 6a03bd87c86c2ba27381a654c8f770861633b87f
   ])
