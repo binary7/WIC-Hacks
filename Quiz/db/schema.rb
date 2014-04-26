@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20140426164141) do
   create_table "answers", force: true do |t|
     t.integer  "question_id"
     t.integer  "value"
+    t.string   "text"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -28,7 +29,7 @@ ActiveRecord::Schema.define(version: 20140426164141) do
 
   create_table "users", force: true do |t|
     t.string   "name"
-    t.integer  "score"
+    t.integer  "score",      default: 0
     t.string   "rec"
     t.datetime "created_at"
     t.datetime "updated_at"

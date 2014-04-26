@@ -5,11 +5,14 @@ class QuestionsController < ApplicationController
   # GET /questions.json
   def index
     @questions = Question.all
+    @user = User.find(params[:user_id])
   end
 
   # GET /questions/1
   # GET /questions/1.json
   def show
+    @questions = Question.all
+    @user = User.find(params[:user_id])
   end
 
   # GET /questions/new
@@ -25,16 +28,6 @@ class QuestionsController < ApplicationController
   # POST /questions.json
   def create
     @question = Question.new(question_params)
-
-    respond_to do |format|
-      if @question.save
-        format.html { redirect_to @question, notice: 'Question was successfully created.' }
-        format.json { render :show, status: :created, location: @question }
-      else
-        format.html { render :new }
-        format.json { render json: @question.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   # PATCH/PUT /questions/1
@@ -67,8 +60,12 @@ class QuestionsController < ApplicationController
       @question = Question.find(params[:id])
     end
 
+    def set_user
+      @user = User.find(params[:user])
+    end
     # Never trust parameters from the scary internet, only allow the white list through.
     def question_params
       params.require(:question).permit(:body)
     end
+
 end
