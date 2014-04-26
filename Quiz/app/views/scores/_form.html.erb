@@ -1,96 +1,43 @@
-<%= form_tag scores_path, :method => 'post', :name => "score_form" do %>
-  <%= @question1.body %>
-  <%= select_tag %>
-    <% @question1.answers.each do |answer| %>
-      <option value="<%= answer.value %>"> <%= answer.text %> </option>
-    <% end %>
-  </select>
+<%= form_for @score do |f| %>
+  <%= f.label :q1, @question1.body %>
+  <%= f.text_field :q1 %>
   <br>
-  <%= @question2.body %>
-  <select>
-    <% @question2.answers.each do |answer| %>
-      <option value="<%= answer.value %>"> <%= answer.text %> </option>
-    <% end %>
-  </select>
+  <%= f.label :q2, @question2.body %>
+  <%= f.text_field :q2 %>
   <br>
-  <%= @question3.body %>
-  <select>
-    <% @question3.answers.each do |answer| %>
-      <option value="<%= answer.value %>"> <%= answer.text %> </option>
-    <% end %>
-  </select>
+  <%= f.label :q3, @question3.body %>
+  <%= f.text_field :q3 %>
   <br>
-  <%= @question4.body %>
-  <select>
-    <% @question4.answers.each do |answer| %>
-      <option value="<%= answer.value %>"> <%= answer.text %> </option>
-    <% end %>
-  </select>
+  <%= f.label :q4, @question4.body %>
+  <%= f.text_field :q4 %>
   <br>
-  <%= @question5.body %>
-  <select>
-    <% @question5.answers.each do |answer| %>
-      <option value="<%= answer.value %>"> <%= answer.text %> </option>
-    <% end %>
-  </select>
+  <%= f.label :q5, @question5.body %>
+  <%= f.text_field :q5 %>
   <br>
-  <%= @question6.body %>
-  <select>
-    <% @question6.answers.each do |answer| %>
-      <option value="<%= answer.value %>"> <%= answer.text %> </option>
-    <% end %>
-  </select>
+  <%= f.label :q6, @question6.body %>
+  <%= f.text_field :q6 %>
   <br>
-  <%= @question7.body %>
-  <select>
-    <% @question7.answers.each do |answer| %>
-      <option value="<%= answer.value %>"> <%= answer.text %> </option>
-    <% end %>
-  </select>
+  <%= f.label :q7, @question7.body %>
+  <%= f.text_field :q7 %>
   <br>
-  <%= @question8.body %>
-  <select>
-    <% @question8.answers.each do |answer| %>
-      <option value="<%= answer.value %>"> <%= answer.text %> </option>
-    <% end %>
-  </select>
+  <%= f.label :q8, @question8.body %>
+  <%= f.text_field :q8 %>
   <br>
-  <%= @question9.body %>
-  <select>
-    <% @question9.answers.each do |answer| %>
-      <option value="<%= answer.value %>"> <%= answer.text %> </option>
-    <% end %>
-  </select>
+  <%= f.label :q9, @question10.body %>
+  <%= f.text_field :q9 %>
   <br>
-  <%= @question10.body %>
-  <select>
-    <% @question10.answers.each do |answer| %>
-      <option value="<%= answer.value %>"> <%= answer.text %> </option>
-    <% end %>
-  </select>
+  <%= f.label :q10, @question10.body %>
+  <%= f.text_field :q10 %>
   <br>
-  <%= @question11.body %>
-  <select>
-    <% @question11.answers.each do |answer| %>
-      <option value="<%= answer.value %>"> <%= answer.text %> </option>
-    <% end %>
-  </select>
+  <%= f.label :q11, @question11.body %>
+  <%= f.text_field :q11 %>
   <br>
-  <%= @question12.body %>
-  <select>
-    <% @question12.answers.each do |answer| %>
-      <option value="<%= answer.value %>"> <%= answer.text %> </option>
-    <% end %>
-  </select>
+  <%= f.label :q12, @question12.body %>
+  <%= f.text_field :q12 %>
   <br>
-  <%= @question13.body %>
-  <select>
-    <% @question13.answers.each do |answer| %>
-      <option value="<%= answer.value %>"> <%= answer.text %> </option>
-    <% end %>
-  </select>
-  <br>
-  <% f.hidden_field :user_id, default: @user_id %>
+  <%= f.label :q13, @question13.body %>
+  <%= f.text_field :q13 %>
+  <%= f.hidden_field :user_id, value: @user.id %>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -14,6 +14,7 @@ class ScoresController < ApplicationController
 
   # GET /scores/new
   def new
+    @user = User.find(params[:user_id])
     @score = Score.new
     @question1 = Question.find(1)
     @question2 = Question.find(2)
@@ -37,11 +38,10 @@ class ScoresController < ApplicationController
   # POST /scores
   # POST /scores.json
   def create
-    raise params.inspect
-    @score = Score.new(score_params)
+    @user = User.find(params[:user_id])
+    @score = @user.score.build(score_params)
     @score.save!
-    puts @score.inspect
-    redirect_to user_index(@user)
+    redirect_to user_path(@user)
   end
 
   # PATCH/PUT /scores/1
