@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140426223325) do
-=======
-ActiveRecord::Schema.define(version: 20140426205023) do
->>>>>>> 6a03bd87c86c2ba27381a654c8f770861633b87f
 
   create_table "answers", force: true do |t|
     t.integer  "question_id"
