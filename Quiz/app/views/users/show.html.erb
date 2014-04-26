@@ -7,12 +7,13 @@
 
 <p>
   <strong>Score:</strong>
-  <%= @user.userScore %>
+  <%= @user.userScore(@user.score.total) %>
+  puts @user.score.total
 </p>
 
 <p>
   <strong>Rec:</strong>
-  <%= @user.userType %>
+  <%= @user.userType(@user.userScore(@user.score.total)) %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

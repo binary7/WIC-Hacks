@@ -1,7 +1,11 @@
 class User < ActiveRecord::Base
   has_one :score
 
-  def userScore(x)
+  def scores
+    self.score.total
+  end
+
+  def userScore(scores)
     sum = 0
     for i in x do
       sum = sum + i
@@ -10,7 +14,7 @@ class User < ActiveRecord::Base
     return total
   end
 
-  def userType(x)
+  def userType(userScore)
     if (x >= 5)
       print "You should consider mathematics"
     elsif (x < 5 && x >= 4)

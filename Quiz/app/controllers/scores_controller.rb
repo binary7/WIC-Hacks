@@ -38,8 +38,8 @@ class ScoresController < ApplicationController
   # POST /scores
   # POST /scores.json
   def create
-    @user = User.find(params[:user_id])
-    @score = @user.score.build(score_params)
+    @user = User.find(params[:score][:user_id])
+    @score = Score.new(score_params)
     @score.save!
     redirect_to user_path(@user)
   end
