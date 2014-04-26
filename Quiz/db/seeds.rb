@@ -6,6 +6,16 @@ questions = Question.create([
   { body: 'I am an introvert'},
   { body: 'I am a thinker more than a feeler'},
   { body: 'I prefer sensing over intuition'},
+  { body: 'I am more of a judger than a perceiver'},
+  { body: 'I am an introvert'},
+  { body: 'I am a thinker more than a feeler'},
+  { body: 'I prefer sensing over intuition'},
+  { body: 'I am more of a judger than a perceiver'},
+  { body: 'I am an introvert'},
+  { body: 'I am a thinker more than a feeler'},
+  { body: 'I prefer sensing over intuition'},
+  { body: 'I am more of a judger than a perceiver'},
+  { body: 'I am more of a judger than a perceiver'},
   { body: 'I am more of a judger than a perceiver'}
   ])
 
@@ -19,7 +29,15 @@ answers = Answer.create([
   { question_id: 4, value: 1, text: "true"},
   { question_id: 4, value: 0, text: "false"},
   { question_id: 5, value: 1, text: "true"},
-  { question_id: 5, value: 0, text: "false"}
+  { question_id: 5, value: 0, text: "false"},
+  { question_id: 6, value: 1, text: "true"},
+  { question_id: 7, value: 0, text: "false"},
+  { question_id: 8, value: 1, text: "true"},
+  { question_id: 9, value: 0, text: "false"},
+  { question_id: 10, value: 1, text: "true"},
+  { question_id: 11, value: 0, text: "false"},
+  { question_id: 12, value: 1, text: "true"},
+  { question_id: 13, value: 0, text: "false"}
   ])
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
